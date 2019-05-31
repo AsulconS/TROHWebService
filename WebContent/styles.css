@@ -1,0 +1,155 @@
+body {
+    background-color: dodgerblue;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+
+    font-family: courier;
+    font-size: 256%;
+
+    border: 4px solid white;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 32px;
+}
+
+form {
+    color: black;
+
+    font-family: courier;
+    font-size: 100%;
+}
+
+select {
+    background-color: #3CBC8D;
+    color: black;
+
+    border: none;
+    border-radius: 4px;
+    border-bottom: 2px solid olive;
+
+    font-family: courier;
+    font-size: 100%;
+}
+
+textarea {
+    background-color: #3CBC8D;
+    color: black;
+
+    font-family: courier;
+    font-size: 100%;
+
+    border: none;
+    border-radius: 4px;
+    border-bottom: 2px solid olive;
+}
+
+textarea:focus {
+    background-color: #3CBC8D;
+    color: #555;
+
+    font-family: courier;
+    font-size: 100%;
+
+    border: 3px solid #555;
+}
+
+input[type=text] {
+    width: 25%;
+
+    background-color: #3CBC8D;
+    color: black;
+
+    font-family: courier;
+    font-size: 100%;
+
+    border: none;
+    border-radius: 4px;
+    border-bottom: 2px solid olive;
+}
+
+input[type=text]:focus {
+    width: 25%;
+
+    background-color: #3CBC8D;
+    color: #555;
+
+    font-family: courier;
+    font-size: 100%;
+
+    border: 3px solid #555;
+}
+
+input[type=button] {
+    background-color: white;
+    color: black;
+    text-align: center;
+
+    font-family: courier;
+    font-size: 100%;
+
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+input[type=button]:focus {
+    background-color: black;
+    color: white;
+    text-align: center;
+
+    font-family: courier;
+    font-size: 100%;
+
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+input[type=submit] {
+    background-color: white;
+    color: black;
+    text-align: center;
+
+    font-family: courier;
+    font-size: 100%;
+
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+input[type=submit]:focus {
+    background-color: black;
+    color: white;
+    text-align: center;
+
+    font-family: courier;
+    font-size: 100%;
+
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+input[type=reset] {
+    background-color: white;
+    color: black;
+    text-align: center;
+
+    font-family: courier;
+    font-size: 100%;
+
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+input[type=reset]:focus {
+    background-color: black;
+    color: white;
+    text-align: center;
+
+    font-family: courier;
+    font-size: 100%;
+
+    border: 2px solid white;
+    border-radius: 4px;
+}
