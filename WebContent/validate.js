@@ -1,12 +1,12 @@
 var eMailPattern = /^\w+@[a-zA-Z]+\.[a-z]{3}$/;
-var namePattern  = /^[A-Z][a-z]+\s*([A-Z][a-z]+)?$/;
+var namePattern  = /^[A-Za-z]+\s*([A-Za-z]+)?$/;
+var numPattern   = /(0|[1-9][0-9]*)/;
 
 function validate(elem)
 {
     switch(elem.id)
     {
         case "field0":
-        case "field1":
             if(namePattern.test(elem.value))
             {
                 document.getElementById("invalid_" + elem.id).innerHTML = "Campo Correcto";
@@ -18,7 +18,7 @@ function validate(elem)
                 return false;
             }
 
-        case "field2":
+        case "field1":
             if(eMailPattern.test(elem.value))
             {
                 document.getElementById("invalid_" + elem.id).innerHTML = "E-Mail Correcto";
@@ -27,6 +27,30 @@ function validate(elem)
             else
             {
                 document.getElementById("invalid_" + elem.id).innerHTML = "Ingrese un E-Mail valido!";
+                return false;
+            }
+        
+        case "field2":
+            if(numPattern.test(elem.value))
+            {
+                document.getElementById("invalid_" + elem.id).innerHTML = "Score Correcto";
+                return true;
+            }
+            else
+            {
+                document.getElementById("invalid_" + elem.id).innerHTML = "Ingrese un Score valido!";
+                return false;
+            }
+
+        case "fieldID":
+            if(numPattern.test(elem.value))
+            {
+                document.getElementById("invalid_" + elem.id).innerHTML = "ID Correcto";
+                return true;
+            }
+            else
+            {
+                document.getElementById("invalid_" + elem.id).innerHTML = "Ingrese un ID valido!";
                 return false;
             }
         
@@ -50,6 +74,8 @@ function validateSubmit()
         alert("Debe aceptar el contrato!");
         valid = false;
     }
+    
+    if(valid) registerPlayer(document.getElementById("field0").value, document.getElementById("field2").value);
     
     return valid;
 }

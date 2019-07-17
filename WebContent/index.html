@@ -10,32 +10,24 @@
 </head>
 <body>
     <h1>DBP Form</h1>
-    <button onclick='getPlayer("Adrian", "4")'>Hacer aparecer</button><br>
+    <form id="getForm-ID" action="#" method="GET">
+        ID:<br>
+        <input id="fieldID" type="text" onblur="validate(this)"><br>
+            <div id="invalid_fieldID"></div><br>
+    </form>
+    <button onclick='getPlayer()'>Hacer aparecer</button><br>
     <h2>Aqui aparecera el Jugador</h2>
     <div class="content"></div>
-    <form id="mainForm-ID" action="results/test.html" onsubmit="return validateSubmit()" method="POST">
-        Nombres:<br>
+    <form id="mainForm-ID" action="#" onsubmit="return validateSubmit()" method="POST">
+        Username:<br>
         <input id="field0" name="names" type="text" onblur="validate(this)"><br>
             <div id="invalid_field0"></div><br>
-        Apellidos:<br>
-        <input id="field1" name="lastNames" type="text" onblur="validate(this)"><br>
-            <div id="invalid_field1"></div><br>
         E-Mail:<br>
-        <input id="field2" name="eMail" type="text" onblur="validate(this)"><br>
+        <input id="field1" name="eMail" type="text" onblur="validate(this)"><br>
+            <div id="invalid_field1"></div><br>
+        Score:<br>
+        <input id="field2" name="score" type="text" onblur="validate(this)"><br>
             <div id="invalid_field2"></div><br>
-        Poblacion:<br>
-        <select name="city">
-            <option value="ali">Alicante</option>
-            <option value="mad">Madrid</option>
-            <option value="sev">Sevilla</option>
-            <option value="val">Valencia</option>
-        </select><br><br>
-        Descripcion:<br>
-        <textarea rows="4" cols="50"></textarea><br><br>
-        Sexo:<br>
-        <input type="radio" name="gender" value="male" checked> Hombre<br>
-        <input type="radio" name="gender" value="female"> Mujer<br>
-        <input type="radio" name="gender" value="other"> Otro<br><br>
         <input type="checkbox" checked> Deseo recibir información sobre novedades y ofertas<br><br>
         <input id="contract-ID" name="contract" type="checkbox">
         Acepto haber leido y aceptar las condiciones generales del programa y la normativa sobre protección de datos<br><br>
